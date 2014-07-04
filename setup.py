@@ -13,5 +13,19 @@ setup(
         'console_scripts': [
             'memcachecli = memcachecli:main',
         ]
-    }
+    },
+    license="MIT",
+    keywords='memcached',
+    classifiers=[
+        "Development Status :: 5 - Production/Stable",
+        "License :: OSI Approved :: MIT License",
+        "Intended Audience :: Developers",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 2",
+        "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: Implementation :: CPython",
+        "Topic :: Internet",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+    ],
 )
