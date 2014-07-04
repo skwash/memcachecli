@@ -17,7 +17,8 @@ class InteractiveMemcache(cmd.Cmd):
 
     def connect(self):
         self.mc = memcache.Client([self.host], debug=0)
-        print "Connected to memcached ({})".format(self.host)
+
+        #print "Connected to memcached ({})".format(self.host)
         self.prompt = "{}> ".format(self.host)
 
     def do_connect(self, line):
@@ -62,8 +63,15 @@ class InteractiveMemcache(cmd.Cmd):
         print "SET", key, val
         print resp
 
+    def go_quit(self, line):
+        """Quit."""
+        readline.write_history_file(historyPath)
+        print ""
+        return True
+
     def do_EOF(self, line):
         readline.write_history_file(historyPath)
+        print ""
         return True
 
 
@@ -82,5 +90,5 @@ def main():
 
     i = InteractiveMemcache()
     i.host = '{}:{}'.format(args.host, args.port)
-    i.prompt = "Not Connected> "
+    i.prompt = "No server(s)> "
     i.cmdloop()
