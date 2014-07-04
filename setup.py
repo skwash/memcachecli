@@ -11,7 +11,7 @@ setup(
     zip_safe=False,
     entry_points={
         'console_scripts': [
-            'memcachecli = memcachecli.cli:main',
+            'memcachecli = memcachecli:main',
         ]
     }
 )
