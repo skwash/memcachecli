@@ -1,11 +1,12 @@
-from setuptools import setup, find_packages
-import memcachecli
+from setuptools import setup
 
 setup(
     name="memcachecli",
-    version=memcachecli.__version__,
+    version="0.0.1",
     description="An interactive CLI for memcached.",
-    packages=find_packages(exclude=["tests"]),
+    author="Josh Hansen",
+    author_email="josh@skwash.net",
+    py_modules=["memcachecli"],
     install_requires=['python-memcached', ],
     zip_safe=False,
     entry_points={
