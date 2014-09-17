@@ -78,7 +78,7 @@ class InteractiveMemcache(cmd.Cmd):
 def main():
 
     parser = argparse.ArgumentParser(description='Interactive memcache client.')
-    parser.add_argument('--host', metavar='hostname', default='localhost',
+    parser.add_argument('host', metavar='HOSTNAME', default='localhost',
                         help='Server to connect to.')
     parser.add_argument('--port', metavar='port',
                         help='Server port.', default=11211)
